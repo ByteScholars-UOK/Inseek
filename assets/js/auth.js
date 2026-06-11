@@ -1,0 +1,1 @@
+﻿// Dinugas auth file. has the form validation for signup and login
