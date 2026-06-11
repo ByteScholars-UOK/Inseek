@@ -1,0 +1,1 @@
+this is where the trash go dont delete what you coded oe messed up put it here in this folder!

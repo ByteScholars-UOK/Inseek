@@ -1,0 +1,48 @@
+Inseek - Online Job Searching Platform
+CSCI 12562: Web Programming
+ByteScholars-UOK
+
+STUDENT REGISTRATION NUMBERS & CONTRIBUTIONS
+
+1. Rithika
+   Student ID: CS/2024/011
+   Contribution: Dashboard page (dashboard.html), persistent navigation
+   component, master stylesheet (global.css), dashboard.js
+
+2. Nimeth
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Home page search engine (index.html), multi-criteria
+   search and filtering logic (search.js), jQuery dynamic data tables
+
+3. Nisagi
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Candidate profile page (profile.html), collapsible
+   section UI with jQuery animations, inline profile editing
+
+4. Dinuga
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Authentication page (auth.html), client-side form
+   validation (auth.js) with email regex and password rules
+
+5. Yasith
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Job categories page (categories.html), sector grid
+   with hover animations, vacancy counter display
+
+6. Prabodha
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Application portal (apply.html), file upload zone
+   with drag-and-drop, file validation (apply.js)
+
+7. Tharush
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Company directory page (companies.html), corporate
+   profile cards, embedded multimedia, review carousel
+
+8. Dulina
+   Student ID: [INSERT STUDENT ID]
+   Contribution: Saved jobs tracker (saved-jobs.html), global site
+   footer with JS Date timestamps, bookmark management
+
+NOTE: Each member contributed equally to the design, development, and test
+      the Inseek platform.
