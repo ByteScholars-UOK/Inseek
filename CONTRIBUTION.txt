@@ -15,7 +15,7 @@ STUDENT REGISTRATION NUMBERS & CONTRIBUTIONS
    search and filtering logic (search.js), jQuery dynamic data tables
 
 3. Nisagi
-   Student ID: [INSERT STUDENT ID]
+   Student ID: CS/2024//052
    Contribution: Candidate profile page (profile.html), collapsible
    section UI with jQuery animations, inline profile editing
 
