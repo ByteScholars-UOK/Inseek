@@ -1,0 +1,1 @@
+﻿// apply.js by Prabodha. handles file upload validation (pdf/docx only)
