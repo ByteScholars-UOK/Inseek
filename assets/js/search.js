@@ -1,0 +1,1 @@
+﻿// Nimeth wrote this - live search filter for the jobs on index page
