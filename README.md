@@ -53,7 +53,7 @@ inseek/
 4. Dinuga - auth.html, auth.js
 5. Yasith - categories.html
 6. Prabodha - apply.html, apply.js
-7. Tharush - companies.html
+7. Tharusha - companies.html
 8. Dulina - saved-jobs.html, footer, common.js
 
 ## team
