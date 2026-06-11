@@ -34,7 +34,7 @@ STUDENT REGISTRATION NUMBERS & CONTRIBUTIONS
    Contribution: Application portal (apply.html), file upload zone
    with drag-and-drop, file validation (apply.js)
 
-7. Tharush
+7. Tharusha
    Student ID: [INSERT STUDENT ID]
    Contribution: Company directory page (companies.html), corporate
    profile cards, embedded multimedia, review carousel
