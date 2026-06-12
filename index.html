@@ -1,1 +1,186 @@
-﻿<!-- index.html - Nimeth handles this page with the search stuff and layout -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inseek - Find Your Next Job</title>
+
+	<link rel="icon" href="assets/images/icons/favicon.ico">
+
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						brand: {
+							light: '#4DA6FF',
+							DEFAULT: '#007AFF',
+							dark: '#0059C6'
+						},
+						text: {
+							main: '#0B0F19',
+							muted: '#64748B'
+						},
+						bg: {
+							white: '#FFFFFF',
+							offWhite: '#F8FAFC'
+						}
+					},
+					fontFamily: {
+						sans: ['Inter', 'system-ui', 'sans-serif']
+					}
+				}
+			}
+		}
+	</script>
+
+	
+	<link rel="stylesheet" href="assets/css/global.css">
+	
+	<link rel="stylesheet" href="assets/css/search.css">
+</head>
+
+<body class="bg-bg-white font-sans text-text-main">
+
+	
+	<header class="border-b border-slate-200 bg-bg-white sticky top-0 z-10">
+		<nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-3">
+			<a href="index.html" class="flex items-center gap-2">
+				<img src="assets/images/logo.jpeg" alt="Inseek logo" class="h-8 w-8 rounded-lg object-cover">
+				<span class="text-xl font-bold text-brand">Inseek</span>
+			</a>
+			<ul class="hidden md:flex items-center gap-6 text-sm font-medium text-text-muted">
+				<li><a href="index.html" class="text-brand">Find Jobs</a></li>
+				<li><a href="categories.html" class="hover:text-brand">Categories</a></li>
+				<li><a href="companies.html" class="hover:text-brand">Companies</a></li>
+				<li><a href="dashboard.html" class="hover:text-brand">Dashboard</a></li>
+				<li><a href="saved-jobs.html" class="hover:text-brand">Saved</a></li>
+			</ul>
+			<a href="auth.html" class="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark">Login</a>
+		</nav>
+	</header>
+
+	
+	<section class="bg-gradient-to-br from-brand to-brand-dark text-white">
+		<div class="max-w-6xl mx-auto px-5 py-16 text-center">
+			<h1 class="text-3xl md:text-4xl font-bold mb-3">Find Your Dream Job in Sri Lanka</h1>
+			<p class="text-white/90 mb-8">Search thousands of openings in IT, Finance, Marketing and Health.</p>
+
+			
+			<form id="searchForm" class="bg-bg-white rounded-2xl shadow-lg p-4 grid grid-cols-1 md:grid-cols-4 gap-3 text-left">
+				<div class="flex flex-col">
+					<label for="keyword" class="text-xs font-semibold text-text-muted mb-1">Keyword</label>
+					<input type="text" id="keyword" placeholder="Job title or keyword"
+						class="rounded-lg border border-slate-300 px-3 py-2 text-text-main focus:border-brand focus:outline-none">
+					<small id="keywordMsg" class="text-red-500 text-xs mt-1 min-h-[16px]"></small>
+				</div>
+
+				<div class="flex flex-col">
+					<label for="location" class="text-xs font-semibold text-text-muted mb-1">Location</label>
+					<select id="location" class="rounded-lg border border-slate-300 px-3 py-2 text-text-main focus:border-brand focus:outline-none">
+						<option value="All">All Locations</option>
+						<option value="Colombo">Colombo</option>
+						<option value="Kandy">Kandy</option>
+						<option value="Galle">Galle</option>
+					</select>
+				</div>
+
+				<div class="flex flex-col">
+					<label for="category" class="text-xs font-semibold text-text-muted mb-1">Category</label>
+					<select id="category" class="rounded-lg border border-slate-300 px-3 py-2 text-text-main focus:border-brand focus:outline-none">
+						<option value="All">All Categories</option>
+						<option value="IT">IT</option>
+						<option value="Finance">Finance</option>
+						<option value="Marketing">Marketing</option>
+						<option value="Health">Health</option>
+					</select>
+				</div>
+
+				<div class="flex items-end gap-2">
+					<button type="submit" class="flex-1 rounded-lg bg-brand px-4 py-2 font-semibold text-white hover:bg-brand-dark">Search</button>
+					<button type="button" id="resetBtn" class="rounded-lg bg-slate-100 px-4 py-2 font-semibold text-text-muted hover:bg-slate-200">Reset</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	
+	<section class="max-w-6xl mx-auto px-5 py-12">
+		<div class="flex items-center justify-between mb-5">
+			<h2 class="text-2xl font-bold">Latest Jobs</h2>
+			<span id="resultCount" class="text-sm font-semibold text-brand"></span>
+		</div>
+
+		
+		<div class="overflow-x-auto rounded-xl border border-slate-200 bg-bg-offWhite">
+			<table class="w-full text-left text-sm" id="jobsTable">
+				<thead class="bg-bg-white text-text-muted border-b border-slate-200">
+					<tr>
+						<th class="px-4 py-3 font-semibold">Job Title</th>
+						<th class="px-4 py-3 font-semibold">Company</th>
+						<th class="px-4 py-3 font-semibold">Location</th>
+						<th class="px-4 py-3 font-semibold">Category</th>
+						<th class="px-4 py-3 font-semibold">Type</th>
+						<th class="px-4 py-3 font-semibold">Salary</th>
+						<th class="px-4 py-3 font-semibold">Posted</th>
+						<th class="px-4 py-3 font-semibold">Action</th>
+					</tr>
+				</thead>
+				<tbody id="jobsBody">
+					
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	
+	<footer class="bg-text-main text-white">
+		<div class="max-w-6xl mx-auto px-5 py-6 text-center text-sm">
+			<p>&copy; <span id="year">2026</span> Inseek - ByteScholars-UOK. All rights reserved.</p>
+			<p class="text-white/60 mt-1">Today: <span id="today"></span></p>
+		</div>
+	</footer>
+
+	
+	<div id="jobModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+		
+		<div id="jobModalOverlay" class="absolute inset-0 bg-black/50"></div>
+
+		
+		<div class="relative bg-bg-white rounded-2xl shadow-xl max-w-lg w-full p-6">
+			<button id="jobModalClose" type="button"
+				class="absolute top-3 right-4 text-2xl leading-none text-text-muted hover:text-text-main">&times;</button>
+
+			<h3 id="jmTitle" class="text-2xl font-bold text-text-main pr-6">Job Title</h3>
+			<p id="jmCompany" class="text-brand font-semibold mb-4">Company</p>
+
+			<div class="flex flex-wrap gap-2 mb-5 text-xs">
+				<span id="jmLocation" class="rounded-full bg-bg-offWhite px-3 py-1">Location</span>
+				<span id="jmCategory" class="rounded-full bg-bg-offWhite px-3 py-1">Category</span>
+				<span id="jmType" class="rounded-full bg-bg-offWhite px-3 py-1">Type</span>
+				<span id="jmSalary" class="rounded-full bg-bg-offWhite px-3 py-1">Salary</span>
+				<span id="jmPosted" class="rounded-full bg-bg-offWhite px-3 py-1 text-text-muted">Posted</span>
+			</div>
+
+			<h4 class="font-semibold text-text-main mb-1">Job Description</h4>
+			<p id="jmDescription" class="text-text-muted mb-6">Description</p>
+
+			<a id="jmApply" href="apply.html"
+				class="inline-block rounded-lg bg-brand px-5 py-2 font-semibold text-white hover:bg-brand-dark">Apply Now</a>
+		</div>
+	</div>
+
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+	<script src="assets/js/search.js"></script>
+
+</body>
+</html>
