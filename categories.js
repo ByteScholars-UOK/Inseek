@@ -1,9 +1,13 @@
+// Yasith's category cards - copy pasted 4 times lol
+//make the see jobs links actually go somewhere kalin his wela thibila haduwa
 document.write(`
     <section class="py-5">
     <div class="container">
         <h1 class="text-center fw-bold display-4 mb-5">
             Featured <span class="custom-orange">Job Categories</span>
         </h1>
+
+
 
         <div class="row g-4 justify-content-center">
             <div class="col-lg-3 col-md-6">
@@ -19,6 +23,10 @@ document.write(`
                 </div>
             </div>
 
+
+
+
+
             <div class="col-lg-3 col-md-6">
                 <div class="card border-0 shadow-lg rounded-4 h-100 d-flex flex-column" style="overflow:hidden;">
                     <div style="width:100%;height:200px;min-height:200px;max-height:200px;overflow:hidden;border-radius:1rem 1rem 0 0;">
@@ -31,6 +39,10 @@ document.write(`
                     </div>
                 </div>
             </div>
+
+
+
+
 
             <div class="col-lg-3 col-md-6">
                 <div class="card border-0 shadow-lg rounded-4 h-100 d-flex flex-column" style="overflow:hidden;">
@@ -45,6 +57,10 @@ document.write(`
                 </div>
             </div>
 
+
+
+
+
             <div class="col-lg-3 col-md-6">
                 <div class="card border-0 shadow-lg rounded-4 h-100 d-flex flex-column" style="overflow:hidden;">
                     <div style="width:100%;height:200px;min-height:200px;max-height:200px;overflow:hidden;border-radius:1rem 1rem 0 0;">
@@ -57,6 +73,11 @@ document.write(`
                     </div>
                 </div>
             </div>
+
+
+
+
+            
         </div>
     </div>
 </section>

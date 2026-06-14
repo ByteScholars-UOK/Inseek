@@ -1,3 +1,5 @@
+// Prabodha - apply form step validation
+
 $(document).ready(function() {
 
 	function showStep(step) {

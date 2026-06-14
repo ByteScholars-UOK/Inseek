@@ -205,9 +205,24 @@
 
     >
 <script>
-(function(){var n=localStorage.getItem('profile_first_name')||localStorage.getItem('user_name');if(n){var e=document.querySelectorAll('.profile-name-display');for(var i=0;i<e.length;i++)e[i].textContent=n;}var p=localStorage.getItem('profile_photo');if(p){var a=document.querySelectorAll('.avatar');for(var i=0;i<a.length;i++)a[i].src=p;}})();
+
+
+(function(){ let n=localStorage.getItem('profile_first_name')
+                 ||localStorage.getItem('user_name');
+                 
+                 if(n){var e=document.querySelectorAll('.profile-name-display');
+                 
+                 for(var i=0;i<e.length;i++)e[i].textContent=n;}
+                 
+                 let p=localStorage.getItem('profile_photo');
+                 
+                 if(p){var a=document.querySelectorAll('.avatar');
+                 
+                 for(var i=0;i<a.length;i++)a[i].src=p;}})();
+
+
 </script>
-<!-- nav updated -->
+
 </body>
 
 

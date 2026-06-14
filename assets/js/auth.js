@@ -1,3 +1,5 @@
+// Dinuga - auth toggle + form handlers
+// still need to add proper validation but the form works lol
 document.addEventListener('DOMContentLoaded', function() {
 
 	var login_div = document.getElementById('login_box');

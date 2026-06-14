@@ -1,4 +1,8 @@
 
+// Nimeth's part - search filtering + job dataset
+
+
+// TODO: fix the save button handler leak, it stacks listeners on re-render
 $(document).ready(function() {
 
 	var fallbackJobs = [
@@ -63,13 +67,13 @@ $(document).ready(function() {
 		{ title: "Operations Manager", company: "MegaMart", location: "Colombo", category: "Operations", type: "Full Time", salary: "180,000", postedDate: "2026-06-10", description: "Oversee supply chain, logistics and store operations to ensure efficiency and customer satisfaction." },
 		{ title: "Logistics Coordinator", company: "SwiftLog Lanka", location: "Galle", category: "Operations", type: "Full Time", salary: "72,000", postedDate: "2026-06-09", description: "Coordinate inbound and outbound shipments, liaise with freight partners and maintain delivery records." },
 		{ title: "Legal Officer", company: "Lanka Law Associates", location: "Colombo", category: "Legal", type: "Full Time", salary: "115,000", postedDate: "2026-06-14", description: "Draft and review contracts, provide legal advice to management and ensure company-wide regulatory compliance." }
-	];
+	]; //passe json karamuuu
 
 	function getRelativeDate(dateStr) {
-		var posted = new Date(dateStr);
-		var now = new Date('2026-06-14');
-		var diffMs = now - posted;
-		var diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+		let posted = new Date(dateStr);
+		let now = new Date('2026-06-14');
+		let diffMs = now - posted;
+		let diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 		if (diffDays === 0) return 'Today';
 		if (diffDays === 1) return '1 day ago';
 		if (diffDays < 7) return diffDays + ' days ago';
@@ -93,7 +97,7 @@ $(document).ready(function() {
 		});
 	}
 
-	var allJobs = processJobs(fallbackJobs);
+	let allJobs = processJobs(fallbackJobs);
 
 	function getSavedJobs() {
 		var stored = localStorage.getItem('inseek_saved_jobs');

@@ -1,3 +1,11 @@
+// Nisagi - profile page dynamic save/load
+
+
+
+
+
+
+//if anyone adds a field this breaks
 document.addEventListener('DOMContentLoaded', function() {
 
     function loadProfile() {
@@ -56,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+        // TODO: refactor these 3 functions into one with a parameter lmao
         function address1Input() {
             var count = 0;
 			var els = document.querySelectorAll('.profile-card input.form-control');

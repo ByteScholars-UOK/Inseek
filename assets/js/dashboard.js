@@ -1,4 +1,10 @@
 
+// Rithika's dashboard slider + featured jobs
+
+
+
+
+//Danneth naa bn z-index 
 $(document).ready(function () {
 
 	let jobs = [
@@ -137,7 +143,7 @@ $(document).ready(function () {
 		}, 800);
 	}, 4500);
 
-
+	// meka harida danna - slider eka weda karanna me line eka wenas karanna epa
 	$(document).ready(function () {
 
 		let logos = $(".company-logo");

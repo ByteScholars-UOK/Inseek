@@ -1,3 +1,5 @@
+// Dulina's footer - shared across all pages via document.write
+//easiest way to share the footer
 let prefix = window.location.pathname.includes("docs/process") ? "../../" : "";
 
 document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">');
@@ -17,6 +19,11 @@ document.write(`
                     </ul>
                 </div>
 
+
+
+
+
+
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold mb-4 text-white">Contact Us</h5>
                     <ul class="list-unstyled">
@@ -34,6 +41,12 @@ document.write(`
                         </li>
                     </ul>
                 </div>
+
+
+
+
+
+
 
                   <div class="col-md-4 mb-4">
                       <h5 class="fw-bold mb-4 text-white">Follow Us</h5>
@@ -54,13 +67,27 @@ document.write(`
                           </a>
                       </div>
                   </div>
+
+
+
+
+
+
+                  
                 
             </div>
         </div>
 
         <div class="text-center py-3" style="background-color: #444444;">
-            <p class="mb-0 text-white fw-medium">© 2026 Inseek All Rights Reserved.</p>
+            <p class="mb-0 text-white fw-medium">© 2026 Inseek All Rights Reserved. <span id="footerClock" class="ms-3" style="font-weight:400;opacity:0.8;"></span></p>
         </div>
+
     </footer>
 
 `);
+
+
+
+
+//clock ekak penna damma
+document.write('<script>function updateClock(){var d=new Date();var h=String(d.getHours()).padStart(2,"0");var m=String(d.getMinutes()).padStart(2,"0");var s=String(d.getSeconds()).padStart(2,"0");var el=document.getElementById("footerClock");if(el)el.textContent=h+":"+m+":"+s;}updateClock();setInterval(updateClock,1000);<\/script>');

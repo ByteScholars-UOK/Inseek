@@ -1,6 +1,12 @@
+
+
+
+
+
+//not sure bn if prefetch or preload is better but this works
 (function() {
 
-	var sliderBanners = [
+	let sliderBanners = [
 		'assets/images/slide banner/1.jpeg',
 		'assets/images/slide banner/2.jpeg',
 		'assets/images/slide banner/3.jpeg',
@@ -9,7 +15,8 @@
 		'assets/images/slide banner/6.jpeg'
 	];
 
-	var otherImages = [
+	let otherImages = [
+
 		'assets/images/logo-transparent.png',
 		'assets/images/logo-transparent-white.png',
 		'assets/images/logo.jpeg',
@@ -30,12 +37,14 @@
 	];
 
 	function preloadImage(src) {
-		var img = new Image();
+
+		let img = new Image();
 		img.src = src;
 	}
 
 	function injectPrefetch(src) {
-		var link = document.createElement('link');
+
+		let link = document.createElement('link');
 		link.rel = 'prefetch';
 		link.href = src;
 		link.as = 'image';
@@ -43,11 +52,13 @@
 	}
 
 	sliderBanners.forEach(function(src) {
+
 		injectPrefetch(src);
 		preloadImage(src);
 	});
 
 	setTimeout(function() {
+		
 		otherImages.forEach(function(src) {
 			preloadImage(src);
 		});
