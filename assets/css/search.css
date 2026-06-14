@@ -1,0 +1,76 @@
+
+#searchForm {
+	transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+#searchForm:hover {
+	box-shadow: 0 14px 34px rgba(0, 122, 255, 0.18);
+}
+
+
+
+
+#searchForm input:focus,
+#searchForm select:focus {
+	box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.20);
+	outline: none;
+}
+
+
+
+
+#searchForm button {
+	transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#searchForm button:active {
+	transform: scale(0.97);
+}
+
+
+
+
+@keyframes rowFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.job-row {
+	animation: rowFadeIn 0.35s ease both;
+	transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.job-row:hover {
+	box-shadow: inset 4px 0 0 0 #007AFF;
+}
+
+
+.job-row a {
+	transition: background-color 0.2s ease;
+}
+
+
+
+
+#resultCount {
+	transition: color 0.2s ease;
+}
+
+
+#keywordMsg {
+	transition: opacity 0.2s ease;
+}
+
+
+@media (max-width: 640px) {
+	.job-row td {
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,110 @@
+{
+	"stats": [
+		{
+			"label": "Jobs Applied",
+			"value": 12,
+			"type": "applied"
+		},
+		{
+			"label": "Saved Jobs",
+			"value": 8,
+			"type": "saved"
+		},
+		{
+			"label": "Profile Views",
+			"value": 156,
+			"type": "views"
+		},
+		{
+			"label": "Active Applications",
+			"value": 4,
+			"type": "active"
+		}
+	],
+	"recentJobs": [
+		{
+			"title": "Senior Frontend Developer",
+			"company": "TechCorp",
+			"location": "Colombo",
+			"category": "IT",
+			"type": "Remote",
+			"salary": "LKR 250,000",
+			"posted": "2 days ago"
+		},
+		{
+			"title": "Marketing Manager",
+			"company": "BrandBoost",
+			"location": "Kandy",
+			"category": "Marketing",
+			"type": "Full-Time",
+			"salary": "LKR 150,000",
+			"posted": "3 days ago"
+		},
+		{
+			"title": "Financial Analyst",
+			"company": "MoneyMatters",
+			"location": "Colombo",
+			"category": "Finance",
+			"type": "Hybrid",
+			"salary": "LKR 200,000",
+			"posted": "1 week ago"
+		},
+		{
+			"title": "Clinical Operations Lead",
+			"company": "HealthPlus",
+			"location": "Galle",
+			"category": "Health",
+			"type": "Full-Time",
+			"salary": "LKR 300,000",
+			"posted": "2 weeks ago"
+		},
+		{
+			"title": "HR Manager",
+			"company": "PeopleFirst",
+			"location": "Colombo",
+			"category": "HR",
+			"type": "Hybrid",
+			"salary": "LKR 180,000",
+			"posted": "1 day ago"
+		},
+		{
+			"title": "Operations Director",
+			"company": "LogisTech",
+			"location": "Kandy",
+			"category": "Operations",
+			"type": "Full-Time",
+			"salary": "LKR 350,000",
+			"posted": "4 days ago"
+		}
+	],
+	"applications": [
+		{
+			"title": "Senior Frontend Developer",
+			"company": "TechCorp",
+			"appliedDate": "Jun 10, 2026",
+			"status": "Reviewing",
+			"progress": 60
+		},
+		{
+			"title": "UX Designer",
+			"company": "CreativeLabs",
+			"appliedDate": "Jun 08, 2026",
+			"status": "Applied",
+			"progress": 20
+		},
+		{
+			"title": "Software Engineer",
+			"company": "CloudBase",
+			"appliedDate": "May 28, 2026",
+			"status": "Interview",
+			"progress": 85
+		},
+		{
+			"title": "Data Analyst",
+			"company": "FinanceHub",
+			"appliedDate": "May 15, 2026",
+			"status": "Rejected",
+			"progress": 100
+		}
+	]
+}

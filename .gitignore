@@ -1,0 +1,15 @@
+Thumbs.db
+.DS_Store
+desktop.ini
+.vscode/
+.idea/
+*.log
+node_modules/
+.env
+.env.*
+dist/
+*.map
+*.tmp
+*.swp
+*.temp
+*.bak

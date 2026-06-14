@@ -1,0 +1,221 @@
+<!-- Rithika's page - dashboard with stats and application tracking -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Inseek.</title>
+
+    <link rel="icon" href="assets/images/logo-transparent.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/companies.css">
+    <script src="cache.js"></script>
+</head>
+
+<body class="dashboard-body">
+
+    <nav class="dashboard_nav">
+
+        <div class="container navbar-container">
+
+            <a href="dashboard.html" class="navbar-logo-link">
+
+                <img src="assets/images/logo-transparent.png" class="navbar-logo-img">
+
+            </a>
+
+            <ul class="nav_links navbar-menu">
+
+                <li>
+                    <a href="dashboard.html" class="nav_link_active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="jobsearch.html" class="nav_link">
+                        Jobs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="messages.html" class="nav_link">
+                        Messages
+                    </a>
+                </li>
+
+                <li>
+                    <a href="saved-jobs.html" class="nav_link">
+                        Saved
+                    </a>
+                </li>
+                <li>
+                    <a href="docs/process/index.html" class="nav_link">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="profile.html" class="profile_button">
+
+                <img src="assets/images/default-avatar.jpeg" class="avatar">
+
+                <span class="profile_name profile-name-display">Me</span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <section class="hero_section">
+
+        <div class="slide-layer slide-current"></div>
+        <div class="slide-layer slide-next"></div>
+
+        <div class="container hero-container" style="position:relative;z-index:4;">
+
+            <div class="hero-content">
+
+                <h1 class="hero-title">Find Work You'll Love</h1>
+
+                <p class="hero-subtitle">
+
+                    Discover opportunities from startups, enterprises, and remote-first companies across Sri Lanka.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <main class="container dashboard-main">
+        <div class="section_head">
+            <div>
+
+                <h2 class="section_title">Featured Jobs</h2>
+
+            </div>
+
+            <a href="jobsearch.html" class="blue_link">
+
+                View All Jobs
+
+            </a>
+
+        </div>
+
+        <div id="latest-jobs" class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        </div>
+
+    </main>
+
+    <section class="container cta_section">
+
+        <div class="cta_card card">
+
+            <h2 class="cta_title">Ready For Your Next Career Move?</h2>
+
+            <p class="cta_subtitle">
+
+                Join thousands of professionals discovering better opportunities every day.
+
+            </p>
+
+            <div>
+
+                <a href="jobsearch.html" class="cta_button btn">
+
+                    Browse Jobs
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="companies-area">
+
+            <div class="container text-center">
+
+                <h2 class="main-title">Top Companies <span class="highlight-text">Hiring</span></h2>
+
+                <div class="logo-row" id="company-logos">
+
+                    <img src="assets/images/company icons/AIA.png" class="company-logo">
+
+                    <img src="assets/images/company icons/OREL IT.png" class="company-logo">
+
+                    <img src="assets/images/company icons/MAS.png" class="company-logo">
+
+                    <img src="assets/images/company icons/Brandix.avif" class="company-logo">
+
+                    <img src="assets/images/company icons/Cinnamon.png" class="company-logo">
+
+                    <img src="assets/images/company icons/Keels.png" class="company-logo">
+
+                    <img src="assets/images/company icons/Emerald.png" class="company-logo">
+
+                    <img src="assets/images/company icons/SLT.png" class="company-logo">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="categories.js"></script>
+    <script src="footer.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+
+
+    >
+<script>
+(function(){var n=localStorage.getItem('profile_first_name')||localStorage.getItem('user_name');if(n){var e=document.querySelectorAll('.profile-name-display');for(var i=0;i<e.length;i++)e[i].textContent=n;}var p=localStorage.getItem('profile_photo');if(p){var a=document.querySelectorAll('.avatar');for(var i=0;i<a.length;i++)a[i].src=p;}})();
+</script>
+<!-- nav updated -->
+</body>
+
+
+
+
+
+
+
+
+
+</html>

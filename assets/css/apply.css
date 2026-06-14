@@ -1,0 +1,31 @@
+.apply_container {
+	max-width: 600px;
+	margin: 60px auto;
+	background: var(--bg-white);
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.drop_zone {
+	border: 2px dashed #ccc;
+	border-radius: 8px;
+	padding: 40px 20px;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 20px;
+	background: #f9f9f9;
+	transition: all 0.2s;
+}
+
+  .drop_zone.dragover {
+	background: #e6f2ff;
+	border-color: var(--brand);
+}
+
+.submit_button {
+	background-color: var(--brand); 
+	color: white; 
+	border-radius: 8px;
+	border: none;
+}

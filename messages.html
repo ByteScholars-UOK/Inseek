@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Messages - Inseek.</title>
+
+	<link rel="icon" href="assets/images/icons/favicon.png">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/global.css">
+
+
+</head>
+
+	<body class="dashboard-body">
+
+	<nav class="dashboard_nav">
+
+		<div class="container navbar-container">
+
+			<a href="dashboard.html" class="navbar-logo-link">
+
+				<img src="assets/images/logo-transparent.png" class="navbar-logo-img">
+
+			</a>
+
+			<ul class="nav_links navbar-menu">
+
+				<li><a href="dashboard.html" class="nav_link">Home</a></li>
+
+				<li><a href="jobsearch.html" class="nav_link">Jobs</a></li>
+
+				<li><a href="messages.html" class="nav_link_active">Messages</a></li>
+
+				<li><a href="saved-jobs.html" class="nav_link">Saved</a></li>
+				<li><a href="docs/process/index.html" class="nav_link">About</a></li>
+
+			</ul>
+
+			<a href="profile.html" class="profile_button">
+
+				<img src="assets/images/default-avatar.jpeg" class="avatar">
+
+				<span class="profile_name profile-name-display">Me</span>
+
+			</a>
+
+		</div>
+
+	</nav>
+
+		<div class="container">
+
+			<div class="row chat-container mx-0">
+
+
+				<div class="col-md-4 p-0 contact-list d-none d-md-block">
+
+					<div class="p-3 border-bottom bg-white sticky-top">
+
+						<h5 class="mb-0 fw-bold" style="color: var(--text-main)">Chats</h5>
+
+					</div>
+
+					<div class="contact-item active">
+						<img src="assets/images/icons/favicon.png" alt="Inseek" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+					<div style="flex:1;min-width:0;">
+							<div class="contact-name">Inseek</div>
+						<div class="contact-preview">Welcome to the platform!</div>
+							</div>
+					<span class="time-badge">Just now</span>
+					</div>
+
+				</div>
+
+
+
+				<div class="col-md-8 p-0 chat-area">
+
+					<div class="chat-header">
+						<img src="assets/images/icons/favicon.png" alt="Inseek" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+							<div>
+							<div style="font-weight:600;color:var(--text-main);">Inseek</div>
+								<div style="font-size:13px;color:var(--text-muted);">Online</div>
+						</div>
+					</div>
+
+					<div class="chat-messages">
+							<div class="message received">Welcome to the platform!</div>
+					</div>
+
+					<div class="chat-input-area">
+
+						<div class="chat-input-group">
+
+							<input type="text" class="chat-input" placeholder="Type a message...">
+
+							<button class="send-button">Send</button>
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+	<script src="footer.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/common.js"></script>
+
+<script>
+	(function(){ var n=localStorage.getItem('profile_first_name')||localStorage.getItem('user_name'); if(n){ var e=document.querySelectorAll('.profile-name-display'); for(var i=0;i<e.length;i++)e[i].textContent=n; } var p=localStorage.getItem('profile_photo'); if(p){ var a=document.querySelectorAll('.avatar'); for(var i=0;i<a.length;i++)a[i].src=p; } } )();
+</script>
+</body>
+
+</html>

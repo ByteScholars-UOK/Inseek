@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Inseek - Home</title>
+
+	<link rel="icon" href="assets/images/logo-transparent.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/global.css">
+
+	<script src="cache.js"></script>
+
+</head>
+
+<body style="background-color: var(--bg-off-white); color: var(--text-main);">
+
+	<nav class="dashboard_nav" style="display: flex; align-items: center; justify-content: space-between; padding: 0 50px;">
+
+		<div style="flex: 1;">
+
+			<a href="index.html" class="navbar-logo-link">
+
+				<img src="assets/images/logo-transparent.png" style="height: 45px;">
+
+			</a>
+
+		</div>
+
+		<div style="flex: 1; text-align: center; display: flex; justify-content: center; gap: 30px;">
+
+			<a href="index.html" class="nav_link_active" style="text-decoration: none; font-weight: 500; color: var(--text-main);">Home</a>
+
+			<a href="#" class="nav_link" onclick="alert('login first'); return false;" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Jobs</a>
+
+			<a href="#" class="nav_link" onclick="alert('login first'); return false;" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">Saved</a>
+
+			<a href="#" class="nav_link" onclick="alert('login first'); return false;" style="text-decoration: none; font-weight: 500; color: var(--text-muted);">About</a>
+
+		</div>
+
+		<div style="flex: 1; text-align: right;">
+
+			<button id="nav_auth_button" style="background-color: var(--brand); color: white; border: none; padding: 10px 24px; border-radius: 50px; font-weight: bold; cursor: pointer;">Sign Up</button>
+
+		</div>
+
+	</nav>
+
+	<div style="display: flex; max-width: 1200px; margin: auto; align-items: flex-start; gap: 40px; padding: 40px;">
+
+		<div style="flex: 1; padding: 20px 20px 60px 20px;">
+
+			<img src="assets/images/logo-transparent.png" style="width: 120px; margin-bottom: 30px;">
+
+			<h1 style="font-family: 'Inter', sans-serif; font-weight: 900; color: #0B0F19; font-size: 64px; line-height: 1.08; margin-bottom: 24px; letter-spacing: -1.5px;">Find the work<br>that defines<br>you.</h1>
+
+			<p style="font-family: 'Inter', sans-serif; color: #64748B; font-size: 17px; line-height: 1.7; max-width: 460px;">Discover the world's most premium opportunities in tech, design, and business. Connect directly with hiring managers.</p>
+
+		</div>
+
+		<div style="flex: 1; padding: 40px 20px; display: flex; justify-content: flex-end;">
+
+			<div id="login_box" style="background-color: var(--bg-white); padding: 50px; width: 100%; max-width: 450px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);">
+
+				<h3 style="color: var(--text-main); font-weight: bold; font-size: 28px; margin-bottom: 10px; text-align: center;">Welcome back</h3>
+
+				<p style="color: var(--text-muted); margin-bottom: 30px; text-align: center;">Sign in to your account.</p>
+
+				<form id="login_form">
+
+					<label style="color: var(--text-main); font-weight: 600; font-size: 14px; margin-bottom: 8px; display: block;">Email</label>
+
+					<input type="email" id="login_email" style="width: 100%; padding: 14px; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; margin-bottom: 20px; font-size: 16px; outline: none;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='rgba(0,0,0,0.1)'" placeholder="name@company.com">
+
+					<label style="color: var(--text-main); font-weight: 600; font-size: 14px; margin-bottom: 8px; display: block;">Password</label>
+
+					<input type="password" id="login_password" style="width: 100%; padding: 14px; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; margin-bottom: 20px; font-size: 16px; outline: none;" onfocus="this.style.borderColor='var(--brand)'" onblur="this.style.borderColor='rgba(0,0,0,0.1)'" placeholder="••••••••">
+
+					<div style="display: flex; align-items: center; margin-bottom: 30px;">
+
+						<input type="checkbox" id="remember_me" style="margin-right: 10px; width: 16px; height: 16px; cursor: pointer;">
+
+						<label for="remember_me" style="color: var(--text-muted); font-size: 14px; cursor: pointer;">Remember me</label>
+
+					</div>
+
+					<button type="submit" style="width: 100%; padding: 16px; background-color: var(--brand); color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer;">Sign In</button>
+
+				</form>
+
+				<div style="text-align: center; margin: 30px 0; color: var(--text-muted); font-size: 14px;">or</div>
+
+				<button id="button_show_register" style="width: 100%; padding: 16px; background-color: var(--bg-off-white); color: var(--text-main); border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer;">Create New Account</button>
+
+			</div>
+
+			<div id="register_box" style="display: none; background-color: var(--bg-white); padding: 50px; width: 100%; max-width: 450px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);">
+
+				<h3 style="color: var(--text-main); font-weight: bold; font-size: 28px; margin-bottom: 10px; text-align: center;">Join inseek.</h3>
+
+				<p style="color: var(--text-muted); margin-bottom: 30px; text-align: center;">Create your profile to get started.</p>
+
+				<form id="register_form">
+
+					<label style="color: var(--text-main); font-weight: 600; font-size: 14px; margin-bottom: 8px; display: block;">Full Name</label>
+
+					<input type="text" id="register_name" style="width: 100%; padding: 14px; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; margin-bottom: 20px; font-size: 16px; outline: none;" placeholder="Proboda">
+
+					<label style="color: var(--text-main); font-weight: 600; font-size: 14px; margin-bottom: 8px; display: block;">Email</label>
+
+					<input type="email" id="register_email" style="width: 100%; padding: 14px; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; margin-bottom: 20px; font-size: 16px; outline: none;" placeholder="name@company.com">
+
+					<label style="color: var(--text-main); font-weight: 600; font-size: 14px; margin-bottom: 8px; display: block;">Password</label>
+
+					<input type="password" id="register_password" style="width: 100%; padding: 14px; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; margin-bottom: 30px; font-size: 16px; outline: none;" placeholder="••••••••">
+
+					<button type="submit" style="width: 100%; padding: 16px; background-color: var(--brand); color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer;">Create Account</button>
+
+				</form>
+
+				<div style="text-align: center; margin: 30px 0; color: var(--text-muted); font-size: 14px;">or</div>
+
+				<button id="button_show_login" style="width: 100%; padding: 16px; background-color: var(--bg-off-white); color: var(--text-main); border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer;">Sign In Instead</button>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<br><br><br>
+
+	<div style="background: linear-gradient(135deg, var(--brand), var(--brand-dark)); padding: 60px 20px; text-align: center; border-radius: 16px; max-width: 1000px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);">
+
+		<div style="display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap;">
+
+			<div style="text-align: center; padding: 10px 50px; flex: 1; min-width: 200px; border-right: 1px solid rgba(255,255,255,0.2);">
+
+				<p style="color: white; font-size: 48px; font-weight: 800; margin: 0;">150K+</p>
+
+				<p style="color: rgba(255,255,255,0.75); font-size: 15px; margin: 6px 0 0 0; font-weight: 500;">Active Jobs</p>
+
+			</div>
+
+			<div style="text-align: center; padding: 10px 50px; flex: 1; min-width: 200px; border-right: 1px solid rgba(255,255,255,0.2);">
+
+				<p style="color: white; font-size: 48px; font-weight: 800; margin: 0;">10M+</p>
+
+				<p style="color: rgba(255,255,255,0.75); font-size: 15px; margin: 6px 0 0 0; font-weight: 500;">Candidates</p>
+
+			</div>
+
+			<div style="text-align: center; padding: 10px 50px; flex: 1; min-width: 200px;">
+
+				<p style="color: white; font-size: 48px; font-weight: 800; margin: 0;">98%</p>
+
+				<p style="color: rgba(255,255,255,0.75); font-size: 15px; margin: 6px 0 0 0; font-weight: 500;">Success Rate</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+		</div>
+
+	</div>
+
+	<br><br><br>
+
+	<div style="text-align: center;">
+
+		<h2 style="color: var(--text-main); font-size: 32px; font-weight: bold; margin-bottom: 10px;">Why choose inseek?</h2>
+
+		<p style="color: var(--text-muted); font-size: 17px;">We made job hunting actually easy and totally in your control.</p>
+
+	</div>
+
+	<br><br>
+
+	<div style="max-width: 900px; margin: auto; display: flex; gap: 20px; flex-wrap: wrap; padding: 0 20px;">
+
+		<div style="background-color: white; border-radius: 12px; padding: 30px; flex: 1; min-width: 250px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+
+			<p style="color: var(--brand); font-weight: bold; font-size: 22px; margin: 0 0 10px 0;">1</p>
+
+			<p style="color: var(--text-main); font-weight: bold; font-size: 17px; margin: 0 0 10px 0;">Smart Matching</p>
+
+			<p style="color: var(--text-muted); font-size: 15px; margin: 0; line-height: 1.6;">Our system pairs you with jobs that fit your exact skills and what you're looking for.</p>
+
+		</div>
+
+		<div style="background-color: white; border-radius: 12px; padding: 30px; flex: 1; min-width: 250px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+
+			<p style="color: var(--brand); font-weight: bold; font-size: 22px; margin: 0 0 10px 0;">2</p>
+
+			<p style="color: var(--text-main); font-weight: bold; font-size: 17px; margin: 0 0 10px 0;">Privacy First</p>
+
+			<p style="color: var(--text-muted); font-size: 15px; margin: 0; line-height: 1.6;">Keep your search secret. You decide who gets to see your profile.</p>
+
+		</div>
+
+		<div style="background-color: white; border-radius: 12px; padding: 30px; flex: 1; min-width: 250px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+
+			<p style="color: var(--brand); font-weight: bold; font-size: 22px; margin: 0 0 10px 0;">3</p>
+
+			<p style="color: var(--text-main); font-weight: bold; font-size: 17px; margin: 0 0 10px 0;">Direct Access</p>
+
+			<p style="color: var(--text-muted); font-size: 15px; margin: 0; line-height: 1.6;">No more waiting. Talk to recruiters directly through our platform messaging.</p>
+
+		</div>
+
+	</div>
+
+	<br><br><br>
+
+	<script src="footer.js"></script>
+
+	<script src="assets/js/auth.js"></script>
+
+</body>
+
+</html>
